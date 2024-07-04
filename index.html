@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Coding Bee Academy Web</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <img src='Logo Codingbee.png' id='up' alt - 'coding bee academy logo'>
+    <div class='colorchangerbtn'>
+      <img src='setting.png' onclick='colorchangerbtn()'>
+    </div>
+    <div id='colorchangerbox'>
+      <h5>select color</h5>
+      <div class='colorchangercontainer'>
+      <span class='themebutton' data-color='#c8fafa' style='background:#c8fafa;'></span>
+      <span class='themebutton' data-color='#ecd4ff' style='background:#ecd4ff;'></span>
+      <span class='themebutton' data-color='#fffaf0' style='background:#fffaf0;'></span>
+      <span class='themebutton' data-color='#fff8dc' style='background:#fff8dc;'></span>
+      <span class='themebutton' data-color='#ffffcc' style='background:#ffffcc;'></span>
+      <span class='themebutton' data-color='#ffddff' style='background:#ffddff;'></span>
+    </div>
+    </div>
+    
+
+  </header>
+
+  <div id='stickyposition'>
+    <nav class='nav-menu'>
+      <a href='#homepage'>Homepage</a>
+      <a href='#teacherspage'>Teacher's Page</a>
+      <a href='#contact'>Contact</a>
+    </nav>
+
+    <div class='progress-container'>
+      <div class='progress-bar' id='myBar'></div>
+    </div>
+  </div>
+
+
+  <div class='container'>
+    <div class='slides'>
+      <div class='textNum'>1 / 9</div>
+      <img src=cba1.jpg style='height: 410px; width: 50%;'>
+    </div>
+
+    <div class='slides'>
+      <div class='textNum'>2 / 9</div>
+      <img src=cba2.jpg style='height: 410px; width: 50%;'>
+    </div>
+
+    <div class='slides'>
+      <div class='textNum'>3 / 9</div>
+      <img src=cba3.jpg style='height: 410px; width: 50%;'>
+    </div>
+
+    <div class='slides'>
+      <div class='textNum'>4 / 9</div>
+      <img src=cba4.jpg style='height: 410px; width: 50%'>
+    </div>
+
+    <div class='slides'>
+      <div class='textNum'>5 / 9</div>
+      <img src=cba5.jpg style='height: 410px; width: 50%'>
+    </div>
+
+    <div class='slides'>
+      <div class='textNum'>6 / 9</div>
+      <img src=cba6.jpg style='height: 410px; width: 50%'>
+    </div>
+
+    <div class='slides'>
+      <div class='textNum'>7 / 9</div>
+      <img src=cba7.jpg style='height: 410px; width: 50%'>
+    </div>
+
+    <div class='slides'>
+      <div class='textNum'>8 / 9</div>
+      <img src=cba8.jpg style='height: 410px; width: 50%'>
+    </div>
+
+    <div class='slides'>
+      <div class='textNum'>9 / 9</div>
+      <img src=cba9.jpg style='height: 410px; width: 50%'>
+    </div>
+
+    <a class='prev' onclick='plusSlides(-1)'>❮</a>
+    <a class='next' onclick='plusSlides(1)'>❯</a>
+  </div>
+
+  <main>
+    <a href='#up' class='up1'>⇧</a>
+    <div id='homepage'>
+      <h2>Our Profile</h2>
+      <h3>About</h3>
+      <p>Coding Bee Academy is a specialist coding school for 5 - 18 years old students. We teach computer science,
+        coding and programming skills, and STEM (Science, Technology, Engineering, and Mathematics) in a fun and
+        accessible environment to your child.</p>
+      <p>Coding is one of the most important and relevant skills your child can learn today that can translate into a
+        rewarding career. Learning to code heps to strengthen academic performance and allows your child to gain
+        soft-skill like organizational skill and preseverence.</p>
+      <p>Our prevent lessons are innovative and exciting! We impart life-long skills such as creativity,
+        problem-solving, computational thinking, and teamwork that will help your child success in school and beyond.</p>
+      <h3>Courses</h3>
+      <p>Our program is for students at all skill levels; age 5-18 and process through a broad array of languages from
+        visual prorgamming languages to text-based languages such as Python, Java, Javascript, and more.</p>
+      <p>Coding Bee Academy's programming language curriculum has helped thousands of students learn about coding. Our
+        lessons are approved by parents and prestigious schools in Indonesia, especially most importantly our
+        curriculum
+        is preferred by our students.</p>
+      <h4>Coding Classes For Your Child</h4>
+      <p>Teach your child the most relevant knowledge they can learn right now – coding</p>
+      <ul>
+        <li>Up-to-date coding curriculum</li>
+        <li>Ages 5 - 18</li>
+        <li>No experience required</li>
+        <li>Skills-based learning philosophy</li>
+        <li>Learn coding to create various technologies such as software, mobile applications, websites, controlling
+          robots & drones, and many others.</li>
+      </ul>
+
+      <h4>STEM+ School Programs</h4>
+      <p>Intracurricular and Extracurricular Programs
+        Kindergarten - Elementary - Junior High School - High School</p>
+      <ul>
+        <li>The best coding curriculum used by the best schools in Indonesia</li>
+        <li>Supporting the national curriculum</li>
+        <li>Supporting school learning philosophies/objectives</li>
+        <li>Stress-free and fun coding learning environment</li>
+        <li>Coding Training</li>
+      </ul>
+
+      <h4>Outreach Coding Bee Program</h4>
+      <p>Learning To Code Outside the Classroom</p>
+      <ul>
+        <li>Learning To Code Outside the Classroom</li>
+        <li>National &international level coding competitions through our extensive partners</li>
+        <li>Coding training on vacation</li>
+        <li>Etc</li>
+      </ul>
+    </div>
+
+    <div id='teacherspage'>
+      <h2>Our Team</h2>
+      <div class='card-container'>
+        <div class='card'>
+          <div class='card-inner'>
+            <div class='card-front'>
+              <h4>Mr Adi</h4>
+              <img src='boy.png' style='width: 200px;'>
+            </div>
+            <div class='card-back'>
+              <h1> </h1>
+              <h4>Coding Bee Academy PIK</h4>
+              <h5>Tools : </h5>
+              <h6>Python</h6>
+              <div class='skillbar'>
+                <div class='python skill'>90%</div>
+              </div>
+              <h6>Web Development</h6>
+              <div class='skillbar'>
+                <div class='webdev skill'>85%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='card'>
+          <div class='card-inner'>
+            <div class='card-front'>
+              <h4>Ms Anifah</h4>
+              <img src='girl.png' style='width: 200px;'>
+            </div>
+            <div class='card-back'>
+              <h1> </h1>
+              <h4>Coding Bee Academy PIK</h4>
+              <h5>Tools : </h5>
+              <h6>Roblox</h6>
+              <div class='skillbar'>
+                <div class='roblox skill'>85%</div>
+              </div>
+              <h6>Scratch</h6>
+              <div class='skillbar'>
+                <div class='scratch skill'>90%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='card'>
+          <div class='card-inner'>
+            <div class='card-front'>
+              <h4>Mr Andreas</h4>
+              <img src='boy2.png' style='width: 200px;'>
+            </div>
+            <div class='card-back'>
+              <h1> </h1>
+              <h4>Coding Bee Academy Surabaya</h4>
+              <h5>Tools : </h5>
+              <h6>React Native</h6>
+              <div class='skillbar'>
+                <div class='reactnative skill'>88%</div>
+              </div>
+              <h6>Kodular</h6>
+              <div class='skillbar'>
+                <div class='kodular skill'>90%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class='card-container'>
+        <div class='card'>
+          <div class='card-inner'>
+            <div class='card-front'>
+              <h4>Ms Ela</h4>
+              <img src='girl3.png' style='width: 200px;'>
+            </div>
+            <div class='card-back'>
+              <h1> </h1>
+              <h4>Coding Bee Academy Surabaya</h4>
+              <h5>Tools : </h5>
+              <h6>Kitten Editor</h6>
+              <div class='skillbar'>
+                <div class='kitteneditor skill'>85%</div>
+              </div>
+              <h6>Turtle</h6>
+              <div class='skillbar'>
+                <div class='turtle skill'>90%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='card'>
+          <div class='card-inner'>
+            <div class='card-front'>
+              <h4>Mr Rizky</h4>
+              <img src='boy3.png' style='width: 200px;'>
+            </div>
+            <div class='card-back'>
+              <h1> </h1>
+              <h4>Coding Bee Academy PIK</h4>
+              <h5>Tools : </h5>
+              <h6>Unity</h6>
+              <div class='skillbar'>
+                <div class='unity skill'>90%</div>
+              </div>
+              <h6>Makey-makey</h6>
+              <div class='skillbar'>
+                <div class='makey skill'>90%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='card'>
+          <div class='card-inner'>
+            <div class='card-front'>
+              <h4>Ms Nitya</h4>
+              <img src='girl2.png' style='width: 200px;'>
+            </div>
+            <div class='card-back'>
+              <h1> </h1>
+              <h4>Coding Bee Academy Surabaya</h4>
+              <h5>Tools : </h5>
+              <h6>G Develop</h6>
+              <div class='skillbar'>
+                <div class='gdevelop skill'>90%</div>
+              </div>
+              <h6>App Inventor</h6>
+              <div class='skillbar'>
+                <div class='appinv skill'>85%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </main>
+
+  <footer id='contact'>
+    <h3>Contact Us</h3>
+    <h4>Location</h4>
+    <p>Ruko Golf Island, Theme Park Block D No. 25, Pantai Indah Kapuk, Jakarta Utara, Jakarta, DKI Jakarta</p>
+    <h4>Email</h4>
+    <p>hello@codingbee.org</p>
+    <h4>Whatsapp</h4>
+    <p>+62 812 8848 1182</p>
+  </footer>
+
+  <script src='script.js'></script>
+
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>

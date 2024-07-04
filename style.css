@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Poly&family=Rancho&family=Satisfy&display=swap');
+
+:root {
+  --main-color: #fff8dc
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: var(--main-color);
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18%;
+}
+
+h2 {
+  padding: 10px 20px;
+  margin: 0;
+  font-size: 30px;
+  font-family: 'Caveat Brush', sans-serif;
+  color: #49210b;
+  background-color: #fbcf67;
+  text-shadow: 1px 1px 2px #fa6e4f;
+}
+
+h3 {
+  padding: 1px 20px;
+  margin: 0;
+  font-family: 'Caveat Brush', sans-serif;
+  font-size: 28px;
+  color: #49210b;
+}
+
+h4 {
+  padding: 0px 20px;
+  margin: 0;
+  font-family: 'Rancho', sans-serif;
+  font-size: 23px;
+  color: #49210b;
+}
+
+h5 {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+p,li {
+  padding: 1px 20px;
+  font-size: 18px;
+}
+
+th {
+  font-size: 24px;
+  font-family: 'Rancho', sans-serif;
+  color: #49210b
+}
+
+td {
+  text-align: center;
+  font-size: 16px;
+}
+
+footer {
+  padding: 20px;
+  color: #49210b;
+  background-color: #fbcf67;
+  text-align: center;
+}
+
+/*nav bar*/
+a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Caveat Brush', sans-serif;
+  color: #49210b;
+  text-shadow: 1px 1px 2px #fa6e4f;
+}
+
+a:hover {
+  color: #fbcf67;
+  text-shadow: 1.5px 1.5px 2px #49210b;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #fbcf67;
+}
+
+/*sticky navbar and progress bar*/
+#stickyposition {
+  position: sticky;
+  top: 0;
+  padding: 0;
+  z-index: 9999;
+}
+
+/*scroll bar*/
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #49210b;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 8px;
+  background: #fa9632;
+}
+
+/*images slider*/
+.slides {
+  margin: 15px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.textNum {
+  color: #49210b;
+  font-family: 'Caveat Brush', sans-serif;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  left: 25.5%
+}
+
+/*to add a pointer when hovering over the thumbnail images */
+/* .cursor {
+  cursor: pointer;
+} */
+  
+/*to add a transparency effect for thumnbail images */
+/* .demo {
+  opacity: 0.6;
+}
+ */
+/* .active,
+.demo:hover {
+  opacity: 1;
+} */
+
+/*set imaages into one row side by side */
+/* .column {
+  float: left;
+  width: 11%;
+} */
+
+/*for next & prev button*/
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/*set the next button to the right*/
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #49210b;
+}
+
+/*up button*/
+.up1 {
+  cursor: pointer;
+  top: 90%;
+  float: right;
+  padding: 15px;
+  position: sticky;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.up1:hover {
+  background-color: #49210b;
+}
+
+header {
+  display: flex;
+}
+
+/* color changer button */
+.colorchangerbtn {
+  right: -90px;
+  cursor: pointer;
+  float: right;
+  position: fixed;
+  padding: 10px 20px;
+  width: 230px;
+}
+
+#colorchangerbox {
+  display: none;
+  position: absolute;
+  top : 0px;
+  right: 35px;
+  width: 150px;
+  padding: 0px;
+  background: transparent;
+  z-index: 999;
+}
+
+#colorchangerbox.active {
+   right: 0px;
+}
+
+#colorchangerbox h5 {
+  color: #49210b;
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+  padding: 5px 0;
+  text-align: center;
+}
+/* 
+.colorchangerbtn .colorchangerbox {
+  position: absolute;
+  top: 0; left: -75px;
+  color: var(--main-color);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 35px;
+} */
+
+#colorchangerbox .colorchangercontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.colorchangerbtn:hover {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#colorchangerbox .colorchangercontainer .themebutton {
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-style: dotted;
+  border-color: #000000;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* card in teacher's page */
+
+.container {
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  align-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  background-color: transparent;
+  width: 50%;
+  height: 280px;
+  perspective: 1000px; 
+  margin: 1%;
+}
+
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: transparent;
+/*   margin: 20px 20px; */
+}
+
+.card-back {
+  background-color: #fbcf67;
+  color: #49210b;
+  transform: rotateY(180deg);
+  width:100%;
+/*   border-radius: 10px; */
+/*   margin: 20px 20px 20px 20px; */
+}
+
+.card-back h4 {
+  border-bottom: 1px solid #49210b;
+  margin: 15px ;
+} 
+
+.card-back h5 {
+  padding-bottom: 10px;
+}
+
+.card-back h6 {
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* container for skill bars */
+.skillbar {
+  margin-right: 2%;
+  margin-left: 2%;
+  background-color: #ddd;
+}
+
+.skill {
+  text-align: right;
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+  color: white;
+}
+
+.python {
+  width: 90%; 
+  background-color: #ef7215;
+} 
+
+.webdev {
+  width: 85%; 
+  background-color: #f9a602;
+} 
+
+.kodular {
+  width: 90%; 
+  background-color: #fc6600;
+}
+
+.reactnative {
+  width: 88%;
+  background-color: #ffbf00;
+}
+
+.roblox {
+  width: 85%;
+  background-color: #ffbf00;
+}
+
+.scratch {
+  width: 90%;
+  background-color: #883000;
+}
+
+.kitteneditor {
+  width: 85%;
+  background-color: #fc6600;
+}
+
+.turtle {
+  width: 90%;
+  background-color: #fda50f;
+}
+
+.gdevelop {
+  width: 90%;
+  background-color: #964000;
+}
+
+.appinv {
+  width: 85%;
+  background-color: #ff7417;
+}
+
+.unity {
+  width: 90%;
+  background-color: #fda50f;
+}
+
+.makey {
+  width: 90%;
+  background-color: #ef7215;
+}
+
+#contact {
+  margin-top: 30px;
+}
