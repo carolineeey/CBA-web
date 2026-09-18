@@ -3,17 +3,17 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Coding Bee Academy Web</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <header>
-    <img src='images/Logo Codingbee.png' id='up' alt='coding bee academy logo'>
-    <div class='colorchangerbtn'>
-      <img src='images/setting.png' onclick='colorchangerbtn()'>
-    </div>
+    <img src='images/Logo Codingbee.png' id='up' class='logo' alt='coding bee academy logo'>
+    <button type='button' class='colorchangerbtn' aria-label='Change theme color' onclick='colorchangerbtn()'>
+      <img src='images/setting.png' alt=''>
+    </button>
     <div id='colorchangerbox'>
       <h5>select color</h5>
       <div class='colorchangercontainer'>
@@ -45,47 +45,47 @@
   <div class='container'>
     <div class='slides'>
       <div class='textNum'>1 / 9</div>
-      <img src=images/cba1.jpg style='height: 410px; width: 50%;'>
+      <img src='images/cba1.jpg' alt='Coding Bee Academy activity'>
     </div>
 
     <div class='slides'>
       <div class='textNum'>2 / 9</div>
-      <img src=images/cba2.jpg style='height: 410px; width: 50%;'>
+      <img src='images/cba2.jpg' alt='Coding Bee Academy activity'>
     </div>
 
     <div class='slides'>
       <div class='textNum'>3 / 9</div>
-      <img src=images/cba3.jpg style='height: 410px; width: 50%;'>
+      <img src='images/cba3.jpg' alt='Coding Bee Academy activity'>
     </div>
 
     <div class='slides'>
       <div class='textNum'>4 / 9</div>
-      <img src=images/cba4.jpg style='height: 410px; width: 50%'>
+      <img src='images/cba4.jpg' alt='Coding Bee Academy activity'>
     </div>
 
     <div class='slides'>
       <div class='textNum'>5 / 9</div>
-      <img src=images/cba5.jpg style='height: 410px; width: 50%'>
+      <img src='images/cba5.jpg' alt='Coding Bee Academy activity'>
     </div>
 
     <div class='slides'>
       <div class='textNum'>6 / 9</div>
-      <img src=images/cba6.jpg style='height: 410px; width: 50%'>
+      <img src='images/cba6.jpg' alt='Coding Bee Academy activity'>
     </div>
 
     <div class='slides'>
       <div class='textNum'>7 / 9</div>
-      <img src=images/cba7.jpg style='height: 410px; width: 50%'>
+      <img src='images/cba7.jpg' alt='Coding Bee Academy activity'>
     </div>
 
     <div class='slides'>
       <div class='textNum'>8 / 9</div>
-      <img src=images/cba8.jpg style='height: 410px; width: 50%'>
+      <img src='images/cba8.jpg' alt='Coding Bee Academy activity'>
     </div>
 
     <div class='slides'>
       <div class='textNum'>9 / 9</div>
-      <img src=images/cba9.jpg style='height: 410px; width: 50%'>
+      <img src='images/cba9.jpg' alt='Coding Bee Academy activity'>
     </div>
 
     <a class='prev' onclick='plusSlides(-1)'>❮</a>
@@ -151,7 +151,7 @@
           <div class='card-inner'>
             <div class='card-front'>
               <h4>Mr Adi</h4>
-              <img src='images/boy.png' style='width: 200px;'>
+              <img src='images/boy.png' class='avatar' alt=''>
             </div>
             <div class='card-back'>
               <h1> </h1>
@@ -173,7 +173,7 @@
           <div class='card-inner'>
             <div class='card-front'>
               <h4>Ms Anifah</h4>
-              <img src='images/girl.png' style='width: 200px;'>
+              <img src='images/girl.png' class='avatar' alt=''>
             </div>
             <div class='card-back'>
               <h1> </h1>
@@ -195,7 +195,7 @@
           <div class='card-inner'>
             <div class='card-front'>
               <h4>Mr Andreas</h4>
-              <img src='images/boy2.png' style='width: 200px;'>
+              <img src='images/boy2.png' class='avatar' alt=''>
             </div>
             <div class='card-back'>
               <h1> </h1>
@@ -212,15 +212,12 @@
             </div>
           </div>
         </div>
-        
-      </div>
 
-      <div class='card-container'>
         <div class='card'>
           <div class='card-inner'>
             <div class='card-front'>
               <h4>Ms Ela</h4>
-              <img src='images/girl3.png' style='width: 200px;'>
+              <img src='images/girl3.png' class='avatar' alt=''>
             </div>
             <div class='card-back'>
               <h1> </h1>
@@ -242,7 +239,7 @@
           <div class='card-inner'>
             <div class='card-front'>
               <h4>Mr Rizky</h4>
-              <img src='images/boy3.png' style='width: 200px;'>
+              <img src='images/boy3.png' class='avatar' alt=''>
             </div>
             <div class='card-back'>
               <h1> </h1>
@@ -264,7 +261,7 @@
           <div class='card-inner'>
             <div class='card-front'>
               <h4>Ms Nitya</h4>
-              <img src='images/girl2.png' style='width: 200px;'>
+              <img src='images/girl2.png' class='avatar' alt=''>
             </div>
             <div class='card-back'>
               <h1> </h1>
@@ -283,7 +280,7 @@
         </div>
 
       </div>
-
+    </div>
   </main>
 
   <footer id='contact'>

@@ -38,19 +38,10 @@ function showSlides(n) {
 
 //script for toggle
 function colorchangerbtn() {
-  var x = document.getElementById('colorchangerbox')
-  if (x.style.display === 'none') {
-    x.style.display = 'block';
-  } else {
-    x.style.display = 'none';
-  }
+  document.getElementById('colorchangerbox').classList.toggle('active');
 }
 
 // script for color changer
-
-document.querySelector('.colorchangerbtn').onclick = () => {
-  document.querySelector('.colorchanger').classList.toggle('active');
-}
 
 let themebuttons = document.querySelectorAll('.themebutton');
 themebuttons.forEach(color => {

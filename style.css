@@ -22,7 +22,11 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 18%;
+  max-width: 100%;
+}
+
+.logo {
+  width: clamp(120px, 18%, 260px);
 }
 
 h2 {
@@ -96,9 +100,16 @@ a:hover {
 
 .nav-menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  align-content: center;
+  align-items: center;
+  gap: 0 12px;
+  padding: 4px 8px;
   background-color: #fbcf67;
+}
+
+.nav-menu a {
+  font-size: clamp(20px, 4vw, 30px);
 }
 
 /*sticky navbar and progress bar*/
@@ -124,7 +135,14 @@ a:hover {
 
 /*images slider*/
 .slides {
-  margin: 15px;
+  position: relative;
+  margin: 15px 0;
+}
+
+.slides img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
 }
 
 .row:after {
@@ -135,11 +153,13 @@ a:hover {
 
 .textNum {
   color: #49210b;
+  background: rgba(255, 255, 255, 0.7);
   font-family: 'Caveat Brush', sans-serif;
-  font-size: 12px;
-  padding: 8px 12px;
+  font-size: 14px;
+  padding: 4px 10px;
   position: absolute;
-  left: 25.5%
+  top: 8px;
+  left: 8px;
 }
 
 /*to add a pointer when hovering over the thumbnail images */
@@ -169,8 +189,10 @@ a:hover {
   cursor: pointer;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   width: auto;
   padding: 15px;
+  background-color: rgba(73, 33, 11, 0.4);
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -179,6 +201,10 @@ a:hover {
 }
 
 /*set the next button to the right*/
+.prev {
+  left: 0;
+}
+
 .next {
   right: 0;
 }
@@ -191,10 +217,17 @@ a:hover {
 /*up button*/
 .up1 {
   cursor: pointer;
-  top: 90%;
-  float: right;
-  padding: 15px;
-  position: sticky;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(73, 33, 11, 0.6);
   color: white;
   font-weight: bold;
   font-size: 30px;
@@ -208,29 +241,52 @@ header {
   display: flex;
 }
 
-/* color changer button */
+/* color changer button (floats above the up button, above the sticky nav) */
 .colorchangerbtn {
-  right: -90px;
   cursor: pointer;
-  float: right;
   position: fixed;
-  padding: 10px 20px;
-  width: 230px;
+  right: 16px;
+  bottom: 80px;
+  z-index: 10000;
+  width: 52px;
+  height: 52px;
+  padding: 6px;
+  border: none;
+  border-radius: 50%;
+  background: #fbcf67;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.colorchangerbtn img {
+  width: 100%;
+  height: 100%;
+}
+
+.colorchangerbtn:hover img {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #colorchangerbox {
   display: none;
-  position: absolute;
-  top : 0px;
-  right: 35px;
-  width: 150px;
-  padding: 0px;
-  background: transparent;
-  z-index: 999;
+  position: fixed;
+  right: 16px;
+  bottom: 144px;
+  width: 160px;
+  padding: 8px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
 }
 
 #colorchangerbox.active {
-   right: 0px;
+  display: block;
 }
 
 #colorchangerbox h5 {
@@ -241,30 +297,11 @@ header {
   padding: 5px 0;
   text-align: center;
 }
-/* 
-.colorchangerbtn .colorchangerbox {
-  position: absolute;
-  top: 0; left: -75px;
-  color: var(--main-color);
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 35px;
-} */
 
 #colorchangerbox .colorchangercontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.colorchangerbtn:hover {
-  animation: rotate 1s linear infinite;
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 #colorchangerbox .colorchangercontainer .themebutton {
@@ -282,21 +319,34 @@ header {
 
 .container {
   position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container .prev {
+  left: 16px;
+}
+
+.container .next {
+  right: 16px;
 }
 
 .card-container {
-  display: flex;
-  align-content: center;
-  width: 100%;
-  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 16px;
 }
 
 .card {
   background-color: transparent;
-  width: 50%;
   height: 280px;
-  perspective: 1000px; 
-  margin: 1%;
+  perspective: 1000px;
+}
+
+.avatar {
+  width: 200px;
 }
 
 
@@ -428,4 +478,11 @@ header {
 
 #contact {
   margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  h2 { font-size: 26px; }
+  h3 { font-size: 24px; }
+  h4 { font-size: 20px; }
+  p, li { font-size: 16px; }
 }
